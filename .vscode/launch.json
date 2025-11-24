@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Debug Streamlit App",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "${workspaceFolder}/main.py",
+                "--server.port",
+                "8501"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Debug Backend Only",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/core.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
